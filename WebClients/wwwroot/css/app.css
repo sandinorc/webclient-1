@@ -1,0 +1,233 @@
+* {
+    /* transition: all 1s; */
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    /* background-color: #098aa7; */
+    /* color: #ec1010; */
+}
+
+body {
+    padding-left: 2mm;
+    background-color: rgb(28 37 56);
+    color: #ddd;
+}
+
+userPic {
+    height: 9mm;
+    width: 9mm;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    border-radius: 50%;
+    right: 3mm;
+    font-size: 6mm;
+    line-height: 9mm;
+}
+
+userTopMenu {
+    overflow: hidden;
+    background-color: #ffffff;
+    border: #8b0d0d solid 1px;
+    color: black;
+    position: absolute;
+    border-radius: 4mm;
+    top: 14mm;
+    right: 5mm;
+    width: 50mm;
+    height: 0mm;
+    transition: all 0.25s;
+    /* display: none; */
+    opacity: 0;
+    z-index: 99999;
+    padding: 2mm;
+}
+
+mainContent {
+    min-width: 480px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+titulo {
+    font-size: 5mm;
+}
+
+top {
+    line-height: 7mm;
+    border-radius: 4mm;
+    position: absolute;
+    padding-left: 4mm;
+    padding-top: 1mm;
+    overflow: hidden;
+    left: 3mm;
+    right: 3mm;
+    top: 3mm;
+    height: 10mm;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+tv {
+    overflow: hidden;
+    transition: all 0.25s;
+    border-radius: 4mm;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 3mm;
+    right: 3mm;
+    top: 15mm;
+    bottom: 3mm;
+    padding-left: 4mm;
+    padding-right: 4mm;
+    padding-top: 2mm;
+}
+
+left_panel {
+    transition: all 0.25s;
+    /* display: none; */
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 4mm;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 3mm;
+    width: 1mm;
+    /* right: 3mm; */
+    top: 15mm;
+    bottom: 3mm;
+    padding-left: 4mm;
+    padding-right: 4mm;
+    padding-top: 2mm;
+}
+
+left_panel titulo {
+    font-size: 4mm;
+    color: #ffffff5f
+}
+
+right_panel {
+    transition: all 0.25s;
+    /* display: none; */
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 4mm;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    /* left: 3mm; */
+    width: 1mm;
+    right: 3mm;
+    top: 15mm;
+    bottom: 3mm;
+    padding-left: 4mm;
+    padding-right: 4mm;
+    padding-top: 2mm;
+}
+
+botton_panel {
+    transition: all 0.25s;
+    /* display: none; */
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 4mm;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 3mm;
+    /* width: 1mm; */
+    right: 3mm;
+    /* top: 15mm; */
+    height: 5mm;
+    bottom: 3mm;
+    padding-left: 4mm;
+    padding-right: 4mm;
+    padding-top: 2mm;
+}
+
+mainContent.rightActive right_panel {
+    /* display: block; */
+    opacity: 1;
+    width: 38mm;
+}
+
+mainContent.leftActive left_panel {
+    opacity: 1;
+    /* display: block; */
+    width: 38mm;
+}
+
+mainContent.bottonActive botton_panel {
+    opacity: 1;
+    /* display: block; */
+    height: 44mm;
+}
+
+mainContent.userMenuActive userTopMenu {
+    opacity: 1;
+    /* display: block; */
+    height: 70mm;
+}
+
+itemMenu {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+itemMenu:hover {
+    background-color: #ffffff5f;
+    color: #000;
+}
+
+mainContent.leftActive tv {
+    left: 50mm;
+}
+
+mainContent.rightActive tv {
+    right: 50mm;
+}
+
+mainContent.bottonActive tv {
+    bottom: 50mm;
+}
+
+mainContent.bottonActive left_panel {
+    bottom: 50mm;
+}
+
+mainContent.bottonActive right_panel {
+    bottom: 50mm;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+triangulito {
+    position: absolute;
+    top: -2mm;
+    right: 3mm;
+    width: 19px;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

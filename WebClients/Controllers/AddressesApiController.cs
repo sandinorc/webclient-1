@@ -22,9 +22,17 @@ namespace WebClients.Controllers
 
         // GET: api/AddressesApi
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Address>>> GetAddresses()
+        public async Task<ActionResult<IEnumerable<Address>>> GetAddresses(int? clientID)
         {
-            return await _context.Addresses.ToListAsync();
+            if (clientID != null)
+            {
+                // if id is defined get only one clientID Addresses
+                return await _context.Addresses.Where(p => p.ClientID == clientID).ToListAsync();
+            }
+            else
+            {
+                return await _context.Addresses.ToListAsync();
+            }
         }
 
         // GET: api/AddressesApi/5

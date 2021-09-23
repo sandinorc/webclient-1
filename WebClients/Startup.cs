@@ -18,12 +18,23 @@ namespace WebClients
 		{
 			Configuration = configuration;
 		}
-
+		// Allow CORDS VARRIABLE
+		readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 		public IConfiguration Configuration { get; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			//Adding a list of allowed domains
+			services.AddCors(options =>
+			{
+				options.AddPolicy(name: MyAllowSpecificOrigins,
+								  builder =>
+								  {
+									  builder.WithOrigins("http://localhost:*",
+														  "*:*");
+								  });
+			});
 			services.AddControllersWithViews();
 			// ********************************************************************************************************************************************************
 			//Here we configurate the connection with the server
@@ -49,7 +60,8 @@ namespace WebClients
 			app.UseRouting();
 
 			app.UseAuthorization();
-
+			// USE MY CORDS 
+			app.UseCors(MyAllowSpecificOrigins);
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllerRoute(
